@@ -1,8 +1,6 @@
-
-
-import org.junit.jupiter.api.Test;
 import lengthData.Centimeter;
 import lengthData.Inch;
+import org.junit.jupiter.api.Test;
 
 import java.math.BigDecimal;
 
@@ -26,12 +24,14 @@ class LengthTests {
 
     @Test
     void shouldConvertOneCentimeterValue() {
-        assertEquals(new BigDecimal("2.5400"), new Inch(BigDecimal.ONE).toCentimeters().getValue());
+        assertEquals(new BigDecimal("2.5400"), new Inch(BigDecimal.ONE).toCentimeters()
+                .getValue());
     }
 
     @Test
     void shouldConvertOneInchValue() {
-        assertEquals(new BigDecimal("0.3938"), new Centimeter(BigDecimal.ONE).toInches().getValue());
+        assertEquals(new BigDecimal("0.3938"), new Centimeter(BigDecimal.ONE).toInches()
+                .getValue());
     }
 
     @Test

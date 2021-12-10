@@ -14,4 +14,7 @@ public class Celcious implements TemperatureUnit {
         this.tempVal = tempVal.setScale(SCALE, ROUNDING_MODE);
     }
 
+    public BigDecimal getValue() {
+        return tempVal;
+    }
 }
