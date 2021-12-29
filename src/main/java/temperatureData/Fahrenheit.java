@@ -1,6 +1,7 @@
 package temperatureData;
 
 import java.math.BigDecimal;
+import java.security.InvalidParameterException;
 
 public class Fahrenheit implements TemperatureUnit {
 
@@ -11,7 +12,7 @@ public class Fahrenheit implements TemperatureUnit {
     public Fahrenheit(BigDecimal value) {
         if (BigDecimal.valueOf(-459.67)
                 .compareTo(value) > 0) {
-            throw new IllegalArgumentException("");
+            throw new InvalidParameterException("Temperature can't be lower than -459.67F");
         }
         tempVal = value.setScale(SCALE, ROUNDING_MODE);
     }

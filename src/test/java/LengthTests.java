@@ -10,6 +10,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 class LengthTests {
 
+    int i;
     @Test
     void shouldConvertZeroCentimetersValue() {
         Centimeter cm = new Inch(BigDecimal.ZERO).toCentimeters();
@@ -18,6 +19,8 @@ class LengthTests {
 
     @Test
     void shouldConvertZeroInchesValue() {
+
+        System.out.println(i);
         Inch in = new Centimeter(BigDecimal.ZERO).toInches();
         assertEquals(BigDecimal.ZERO.setScale(4), in.getValue());
     }

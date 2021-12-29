@@ -1,7 +1,6 @@
 package dependencyInversion;
 
 
-import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
 public class AirConditioner {
@@ -26,11 +25,12 @@ public class AirConditioner {
     }
 
     private void coolDown() throws InterruptedException {
-        while (sensor.measure() > desiredTemperature - THRESHOLD) {
+        while (sensor.measure() > THRESHOLD - desiredTemperature) {
             System.out.println("Cooling down");
             // cooling down somehow ;)
             TimeUnit.SECONDS.sleep(5);
         }
+        System.out.println("Colled ! ");
     }
 }
 

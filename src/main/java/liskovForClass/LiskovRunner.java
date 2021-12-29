@@ -1,9 +1,12 @@
 package liskovForClass;
 
+import java.util.List;
+
 public class LiskovRunner {
 
     public static void main(String[] args) {
         final Transaction transaction = new Transaction();
+
         final StockTransaction stockTransaction = new StockTransaction();
 
         runLiskovForClass(stockTransaction);
